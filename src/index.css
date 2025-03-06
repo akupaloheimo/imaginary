@@ -8,7 +8,6 @@
 /* Ensure the body and html take full height */
 html, body {
   height: 100%;
-  overflow: hidden; /* Prevent scrolling if unwanted */
 }
 
 /* Full-screen background */
@@ -16,14 +15,14 @@ html, body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: linear-gradient(45deg,#3f3995, #3d5b7a,#4ac34e,#398f3b,#3cb267,#34deca);
-  background-size: 300% 300%;
-  animation: gradientAnimation 12s ease infinite;
+  align-items: center
 }
 
 body, .App {
   cursor: url("../public/NORMAL.cur"), auto;
+  /*background: linear-gradient(45deg,#3f3995, #3d5b7a,#4ac34e,#398f3b,#3cb267,#34deca);
+  background-size: 300% 300%;
+  animation: gradientAnimation 12s ease infinite;*/
 }
 
 button {
@@ -42,19 +41,6 @@ button {
   color: white;
   font-family: 'Times New Roman', Times, serif;
   font-size: 24px;
-}
-
-/* Gradient Animation */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 code {

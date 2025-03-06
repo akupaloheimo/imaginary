@@ -1,17 +1,27 @@
+import React from "react";
+import "./Map.css"; // Ensure you create a CSS file for styles
+
 function Map() {
   return (
-    <div>
-      <div className="page">
-      <marquee className="marquee" >This is the Map page!</marquee>
-      </div>
-      <img src="/Näyttökuva 2025-03-04 112713.png" alt="Map Image" usemap="#image-map" />
+    <div className="map-container">
+      <marquee className="marquee">This is the Map page!</marquee>
+      <div className="map-wrapper">
+        <img src="/Näyttökuva 2025-03-04 112713.png" alt="Map Image" className="map-image" />
 
-      <map name="image-map">
-          <area target="" alt="Ferris wheel" title="Ferris wheel" href="" coords="490,427,768,742" shape="rect" />
-          <area target="" alt="Entrance" title="Entrance" href="" coords="101,813,562,1305" shape="rect" />
-          <area target="" alt="Cafe" title="Cafe" href="" coords="1620,614,1899,930" shape="rect" />
-          <area target="" alt="Outlet" title="Outlet" href="" coords="1029,835,1233,1081" shape="rect" />
-      </map>
+        {/* Clickable Areas */}
+        <div className="map-area ferris-wheel" onClick={() => alert("Ferris Wheel Clicked!")}>
+          Ferris Wheel
+        </div>
+        <div className="map-area entrance" onClick={() => alert("Entrance Clicked!")}>
+          Entrance
+        </div>
+        <div className="map-area cafe" onClick={() => alert("Cafe Clicked!")}>
+          Cafe
+        </div>
+        <div className="map-area outlet" onClick={() => alert("Outlet Clicked!")}>
+          Outlet
+        </div>
+      </div>
     </div>
   );
 }

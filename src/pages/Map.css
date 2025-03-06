@@ -1,0 +1,54 @@
+.map-container {
+    text-align: center;
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    background-color: #000000;
+    border: 4px ridge #ffffff;
+    padding: 20px;
+  }
+  
+  .map-wrapper {
+    width: 100%;
+  }
+  
+  .map-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .map-area {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  
+  .map-area:hover {
+    background-color: rgba(255, 215, 0, 0.9);
+  }
+  
+  /* Positioning clickable areas (adjust based on your image size) */
+  .ferris-wheel {
+    top: 35%; 
+    left: 40%;
+  }
+  
+  .entrance {
+    top: 70%; 
+    left: 10%;
+  }
+  
+  .cafe {
+    top: 45%;
+    left: 75%;
+  }
+  
+  .outlet {
+    top: 65%;
+    left: 50%;
+  }

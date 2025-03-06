@@ -1,9 +1,13 @@
+/* Styles for the App component */
+
 .App {
-  width: 1200px;
-  margin: auto;
-  background-color: #000000; /* Black content box */
-  border: 4px ridge #ffffff; /* 3D effect */
+  width: 1000px;
+  margin: 50px auto; /* Centers the content */
+  background-color: rgba(192, 192, 192, 0.95); /* Windows 95 gray with slight transparency */
+  border: 4px ridge white; /* 3D effect */
   padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Shadow effect to "lift" the content */
+  position: relative; /* Ensures it stacks properly */
 }
 
 
@@ -35,7 +39,12 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it's on top of everything */
+  backdrop-filter: blur(10px); /* Smooth glass effect */
 }
 
 .button {
@@ -54,8 +63,8 @@
 
 .content {
   text-align: center;
-  color: white;
-  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
   font-size: 24px;
 }
 
@@ -70,4 +79,44 @@
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove extra space below the image */
   margin: auto; /* Center the image if needed */
+}
+
+body {
+  background: linear-gradient(45deg,#3f3995, #3d5b7a,#4ac34e,#398f3b,#3cb267,#34deca);
+  background-attachment: fixed; /* Makes background stay in place */
+  background-size: auto; /* Ensures old-school tiling */
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  animation: gradientAnimation 12s ease infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.content-box {
+  width: 80%; /* Adjust as needed */
+  max-width: 800px; /* Prevents it from becoming too wide */
+  height: 500px; /* Adjust as needed */
+  background-color: rgba(192, 192, 192, 0.95); /* Light gray */
+  border: 4px ridge white; /* 3D effect */
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  overflow: auto; /* Enables scrolling inside the box */
+  margin: 50px auto; /* Centers the box */
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
