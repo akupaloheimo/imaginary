@@ -1,15 +1,24 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Map from "./pages/Map";
+import Menu from "./pages/Menu";
 
 function App() {
   return (
+    <Router>
     <div className="App">
+      <Navbar />
       <div className="content">
-        <div className="nav">Navigation</div>
-        <div className="page">
-          <div>Imaginary Garden</div>
-        </div>
+      <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/map" element={<Map />} />
+            <Route path="/menu" element={<Menu />} />
+          </Routes>
       </div>
     </div>
+    </Router>
   );
 }
 

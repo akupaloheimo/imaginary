@@ -17,12 +17,22 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg,#ebddca, #b6d2dd,#dea4bd,#a581c4,#60cbb6,#8adcde);
+  background: linear-gradient(45deg,#3f3995, #3d5b7a,#4ac34e,#398f3b,#3cb267,#34deca);
   background-size: 300% 300%;
   animation: gradientAnimation 12s ease infinite;
 }
 
 body, .App {
+  cursor: url("../public/NORMAL.cur"), auto;
+}
+
+button {
+  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   cursor: url("https://i.imgur.com/i4rCr6Z.png"), auto;
 }
 
@@ -63,4 +73,7 @@ code {
   text-align: center;
   font-size: 20px;
   backdrop-filter: blur(10px); /* Smooth glass effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
