@@ -3,9 +3,7 @@
     position: relative;
     width: 1200px;
     margin: auto;
-    background-color: #000000;
     border: 4px ridge #ffffff;
-    padding: 20px;
   }
   
   .map-wrapper {
@@ -30,9 +28,9 @@
   
   .map-area:hover {
     background-color: rgba(255, 215, 0, 0.9);
+    cursor: url("../../public/LINK SELECT.cur"), auto;
   }
   
-  /* Positioning clickable areas (adjust based on your image size) */
   .ferris-wheel {
     top: 35%; 
     left: 40%;

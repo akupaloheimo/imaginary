@@ -1,7 +1,11 @@
 /* Styles for the App component */
 
 .App {
-  width: 1000px;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 100%;
+  display: flex;
   margin: 50px auto; /* Centers the content */
   background-color: rgba(192, 192, 192, 0.95); /* Windows 95 gray with slight transparency */
   border: 4px ridge white; /* 3D effect */
@@ -68,6 +72,18 @@
   font-size: 24px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  text-align: center;
+  width: 100%;
+  min-height: 100vh; /* Ensure it can grow */
+  padding-top: 20px; /* Push content down to avoid overlap with fixed header */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+}
+
 .page div {
   font-size: 24px;
   font-weight: bold;
@@ -82,9 +98,9 @@
 }
 
 body {
-  background: linear-gradient(45deg,#3f3995, #3d5b7a,#4ac34e,#398f3b,#3cb267,#34deca);
-  background-attachment: fixed; /* Makes background stay in place */
-  background-size: auto; /* Ensures old-school tiling */
+  background: linear-gradient(45deg,#3a3d9b, #4b6997, #48a77c, #3ea15d, #3dbb82, #40d6c9);
+  /*background-attachment: fixed;*/
+  background-size: 300% 400%;
   margin: 0;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
@@ -94,18 +110,32 @@ body {
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Ensure scrolling is allowed */
 }
 
 .content-box {
-  width: 80%; /* Adjust as needed */
+  width: 100%; /* Adjust as needed */
   max-width: 800px; /* Prevents it from becoming too wide */
-  height: 500px; /* Adjust as needed */
   background-color: rgba(192, 192, 192, 0.95); /* Light gray */
   border: 4px ridge white; /* 3D effect */
   padding: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   overflow: auto; /* Enables scrolling inside the box */
   margin: 50px auto; /* Centers the box */
+}
+
+.year {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 5px;
+  animation: blink 3s infinite ease-in-out;
+}
+
+.left-align {
+  text-align: left;
 }
 
 /* Gradient Animation */
@@ -119,4 +149,11 @@ html {
   100% {
     background-position: 0% 50%;
   }
+}
+
+
+@keyframes blink {
+  0% { opacity: 1; }  /* Fully visible */
+  50% { opacity: 0; } /* Invisible */
+  100% { opacity: 1; } /* Fully visible */
 }

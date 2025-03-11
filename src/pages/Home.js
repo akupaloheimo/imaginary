@@ -1,9 +1,27 @@
+import React, { useState, useEffect } from "react";
+
 function Home() {
+  const times = [
+    1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006,
+    2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
+    2019, 2020, 2021, 2022, 2023, 2024, 2025,
+  ];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % times.length); // Loops back
+    }, 2025);
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
   return (
     <div>
+      <h1>Home</h1>
       <marquee className="marquee">Welcome to Imaginary Garden!</marquee>
-      <div className="content-box">
-        <h1>Home</h1>
+      <h1 className="year">{times[index]}</h1>
+      <div>
         <p>
           Lorem ipsum odor amet, consectetuer adipiscing elit. Ac quam interdum
           consectetur tellus sollicitudin. Quam condimentum dignissim erat leo
