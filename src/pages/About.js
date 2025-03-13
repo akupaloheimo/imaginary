@@ -3,13 +3,14 @@ function About() {
     <div className="page">
       <marquee>
         Welcome to "Reclaimed Worlds: Nature’s Return" – A Journey to Abandoned
+        Places
       </marquee>
       <h1>About Us</h1>
       <p className="left-align">
-        Places In 1995, a failed theme park was left to nature in an
-        unprecedented experiment. Rather than demolish the remnants of human
-        ambition, the founders of this project made a bold decision: to simply
-        walk away. For 30 years, no human set foot inside.<br></br>
+        In 1995, a failed theme park was left to nature in an unprecedented
+        experiment. Rather than demolish the remnants of human ambition, the
+        founders of this project made a bold decision: to simply walk away. For
+        30 years, no human set foot inside.<br></br>
         <br></br>The goal? To witness what happens when the built environment is
         surrendered to the forces of time and nature. Now, after three decades
         of complete abandonment, we invite you to step into a world transformed.

@@ -5,7 +5,6 @@ function Map() {
   return (
     <div className="content">
       <div className="map-container">
-        <marquee className="marquee">This is the Map page!</marquee>
         <div className="map-wrapper">
           <img
             src="/Näyttökuva 2025-03-04 112713.png"
