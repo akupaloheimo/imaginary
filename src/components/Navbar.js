@@ -10,9 +10,9 @@ function Navbar() {
       <Link to="/map" className="button">
         Map
       </Link>
-      <Link to="/menu" className="button">
+      {/* <Link to="/menu" className="button">
         Menu
-      </Link>
+      </Link> */}
       <Link to="/tickets" className="button">
         Tickets
       </Link>

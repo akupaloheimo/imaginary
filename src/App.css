@@ -72,6 +72,11 @@
   display: inline-block;
 } 
 
+.ticket-button:hover {
+  background-color: #a0a0a0;
+  border: 2px inset #ffffff;
+}
+
 .button-container {
   text-align: center; /* Center the button horizontally */
   margin-top: 100px; /* Adjust the margin to move the button lower */
@@ -123,6 +128,10 @@ body {
   font-family: "Times New Roman", Times, serif;
   color: black;
   animation: gradientAnimation 12s ease infinite;
+}
+
+.opening-hours {
+  margin-top: 30px; /* Adjust this value as needed */
 }
 
 html {

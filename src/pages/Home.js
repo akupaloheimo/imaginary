@@ -21,7 +21,7 @@ function Home() {
     <div>
       <h1>Home</h1>
       <marquee className="marquee">
-        Reclaimed Worlds: Nature’s Return A journey to abandoned places
+        Reclaimed Worlds? A journey to abandoned places
       </marquee>
       <h1 className="year">{times[index]}</h1>
       <div>
@@ -31,13 +31,16 @@ function Home() {
           it.
         </p>
       </div>
-      <div>
+      <div className="opening-hours">
         <p>
           Opening hours all year 10-24 Visit only with prior booking of a
           private tour.
         </p>
       </div>
-      <div classNmae="button-container">
+      <div className="opening-hours">
+        <p>Location: 1234 Abandoned Theme Park, Earth</p>
+      </div>
+      <div className="button-container">
         <p>Book your tour now and step into the forgotten world!</p>
         <Link to="/tickets" className="ticket-button">
           Tickets

@@ -6,11 +6,7 @@ function Map() {
     <div className="content">
       <div className="map-container">
         <div className="map-wrapper">
-          <img
-            src="/Näyttökuva 2025-03-04 112713.png"
-            alt="Map Image"
-            className="map-image"
-          />
+          <img src="/MAP.jpg" alt="Map Image" className="map-image" />
 
           <div
             className="map-area ferris-wheel"
@@ -25,7 +21,7 @@ function Map() {
             Entrance
           </div>
           <div className="map-area cafe" onClick={() => alert("Cafe Clicked!")}>
-            Cafe
+            Hotel
           </div>
           <div
             className="map-area outlet"
