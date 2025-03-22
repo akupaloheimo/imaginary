@@ -2,55 +2,79 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const times = [
-    1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006,
-    2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
-    2019, 2020, 2021, 2022, 2023, 2024, 2025,
+  const testimonials = [
+    "A hauntingly beautiful experience.",
+    "Felt like I was in a post-apocalyptic movie!",
+    "So much history left untouched. Must-see!",
+    "An unforgettable journey into the past.",
+    "Absolutely breathtaking and eerie!",
   ];
+
+  const times = Array.from({ length: 31 }, (_, i) => 1995 + i);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % times.length);
     }, 1500);
-
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div>
-      <h1>Home</h1>
       <marquee className="marquee">
         Reclaimed Worlds? A journey to abandoned places
       </marquee>
-      <h1 className="year">{times[index]}</h1>
+      <span>
+        <h1>Home</h1>
+        <h1 className="year">{times[index]}</h1>
+      </span>
+
       <div>
-        <p>
-          What happens when humans leave a theme park for 30 years? <br></br>
+        <p style={{ textAlign: "left", fontSize: "2rem" }}>
+          What happens when humans leave a theme park for 30 years? <br />
           This exhibition lets you explore this forgotten world—while protecting
           it.
         </p>
       </div>
       <div className="opening-hours">
-        <p>
-          Opening hours all year 10-24 Visit only with prior booking of a
+        <p style={{ textAlign: "left", fontWeight: "bold" }}>
+          Opening hours all year 10-24. Visit only with prior booking of a
           private tour.
         </p>
       </div>
       <div className="opening-hours">
-        <p>Location: 1234 Abandoned Theme Park, Earth</p>
+        <p style={{ textAlign: "left", fontWeight: "bold" }}>
+          Location: 1234 Abandoned Theme Park, Earth
+        </p>
       </div>
-      <div className="button-container">
-        <p>Book your tour now and step into the forgotten world!</p>
+      <div
+        className="button-container"
+        style={{ display: "flex", alignItems: "center", gap: "10px" }}
+      >
+        <p style={{ textAlign: "left", fontSize: "2rem" }}>
+          Book your tour now and step into the forgotten world!
+        </p>
         <Link to="/tickets" className="ticket-button">
           Tickets
         </Link>
       </div>
-      <div classNmae="button-container">
-        <p>Explore the map and see what awaits you!</p>
+      <div
+        className="button-container"
+        style={{ display: "flex", alignItems: "center", gap: "10px" }}
+      >
+        <p style={{ textAlign: "left", fontSize: "2rem" }}>
+          Explore the map and see what awaits you!
+        </p>
         <Link to="/map" className="ticket-button">
           Map
         </Link>
+      </div>
+      <div className="testimonials" style={{ marginTop: "50px" }}>
+        <h2 style={{ textAlign: "left" }}>Testimonials</h2>
+        <p style={{ textAlign: "left" }}>
+          {testimonials[index % testimonials.length]}
+        </p>
       </div>
     </div>
   );

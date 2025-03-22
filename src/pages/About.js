@@ -2,8 +2,7 @@ function About() {
   return (
     <div className="page">
       <marquee>
-        Welcome to "Reclaimed Worlds: Nature’s Return" – A Journey to Abandoned
-        Places
+        Welcome to Reclaimed Worlds? A Journey to Abandoned Places
       </marquee>
       <h1>About Us</h1>
       <p className="left-align">

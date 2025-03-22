@@ -31,7 +31,7 @@
   font-size: 24px;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  background-color: rgb(17, 255, 0);
+  background-color: rgba(115, 255, 105, 0);
   padding: 5px;
 }
 
@@ -79,7 +79,7 @@
 
 .button-container {
   text-align: center; /* Center the button horizontally */
-  margin-top: 100px; /* Adjust the margin to move the button lower */
+  margin-top: 50px; /* Adjust the margin to move the button lower */
 }
 
 .button:hover {
@@ -162,6 +162,11 @@ html {
 
 .left-align {
   text-align: left;
+}
+
+.nav-logo {
+  height: 20px; /* Adjust as needed */
+  width: auto; /* Keeps aspect ratio */
 }
 
 /* Gradient Animation */
