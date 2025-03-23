@@ -3,7 +3,8 @@
 .App {
   top: 0;
   left: 0;
-  width: 1200px;
+  width: 90%;
+  max-width: 1200px;
   height: 100%;
   display: flex;
   margin: 50px auto; /* Centers the content */
@@ -67,7 +68,8 @@
   padding: 10px 30px; /* Increase padding for width */
   margin: 5px;
   cursor: url("../public/LINK\ SELECT.cur"), auto;
-  width: 250px; /* Set a fixed width */
+  width: auto;
+  max-width: 250px; /* Set a fixed width */
   text-align: center; /* Center text inside the button */
   display: inline-block;
 } 

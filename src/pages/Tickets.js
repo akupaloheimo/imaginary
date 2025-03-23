@@ -4,20 +4,20 @@ function Tickets() {
   const ticketOptions = [
     {
       id: 1,
-      name: "One Day Ticket",
-      price: "$50",
-      description: "Access to the event for one full day.",
+      name: "Private Day Tour",
+      price: "$100",
+      description: "Access to the exhibit during the day.",
     },
     {
       id: 2,
-      name: "Three Day Ticket",
-      price: "$120",
-      description: "Access to the event for three days.",
+      name: "Private Night Tour",
+      price: "$100",
+      description: "Access to the event during the night.",
     },
     {
       id: 3,
-      name: "VIP Ticket",
-      price: "$250",
+      name: "VIP Tour",
+      price: "$150",
       description: "Three-day access with exclusive perks and benefits.",
     },
   ];
@@ -26,6 +26,11 @@ function Tickets() {
     <div>
       <h1>Tickets</h1>
       <p>Buy your tickets here!</p>
+      <p>
+        To ensure that the exhibiton is protected we are offering private tours
+        of the space. <br></br>All necessary gear is included in the ticet
+        price.
+      </p>
       <div
         style={{
           display: "flex",
@@ -52,8 +57,10 @@ function Tickets() {
             <p>
               <strong>{ticket.price}</strong>
             </p>
-            <div className="ticket-button">
-              <Link to={`/purchase/${ticket.id}`}>Buy Now</Link>
+            <div>
+              <Link to="/sold-out" className="ticket-button">
+                Buy Now
+              </Link>
             </div>
           </div>
         ))}

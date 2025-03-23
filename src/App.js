@@ -6,6 +6,7 @@ import Map from "./pages/Map";
 import Menu from "./pages/Menu";
 import Tickets from "./pages/Tickets";
 import About from "./pages/About";
+import SoldOut from "./pages/SoldOut";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/tickets" element={<Tickets />} />
             <Route path="/about" element={<About />} />
+            <Route path="/sold-out" element={<SoldOut />} />
           </Routes>
         </div>
       </div>
