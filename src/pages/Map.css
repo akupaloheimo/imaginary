@@ -56,14 +56,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    max-width: fit-content;
-    height: 100%;
-    max-height: fit-content;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
   }
   
   .modal-content {
@@ -71,16 +70,22 @@
     padding: 20px;
     border-radius: 10px;
     position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    width: auto;
+    max-width: 300vh;
+    max-height: 90vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    z-index: 1001;
+    overflow: auto;
   }
   
   .close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
     padding-left: 8px;
     padding-right: 8px;
@@ -92,13 +97,20 @@
   }
   
   .image-container {
+    margin-top: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    max-width: 100%; /* Prevents overflow */
+    overflow-x: auto; /* Hide unnecessary scrollbar */
   }
   
   .modal-image {
-    width: 250px;
+    width: 50%; 
     height: auto;
+    max-width: 800px;
     border-radius: 5px;
   }
   

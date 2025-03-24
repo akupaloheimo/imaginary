@@ -22,18 +22,11 @@ function Home() {
 
   return (
     <div>
-      <marquee
-        className="marquee"
-        style={{
-          fontSize: "3rem",
-          background:
-            "-webkit-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
-      >
-        Reclaimed Worlds? A journey to abandoned places
-      </marquee>
+      <div className="marquee-container">
+        <div className="marquee-content">
+          Reclaimed Worlds? A journey to abandoned places
+        </div>
+      </div>
       <span>
         <h1>Home</h1>
         <h1 className="year">{times[index]}</h1>

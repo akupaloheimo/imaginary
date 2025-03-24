@@ -1,10 +1,10 @@
 /* Styles for the App component */
 
 .App {
-  top: 0;
-  left: 0;
-  width: 90%;
+  /* top: 0;
+  left: 0; */
   max-width: 1200px;
+  width: 90%;
   height: 100%;
   display: flex;
   margin: 50px auto; /* Centers the content */
@@ -189,4 +189,31 @@ html {
   0% { opacity: 1; }  /* Fully visible */
   50% { opacity: 0; } /* Invisible */
   100% { opacity: 1; } /* Fully visible */
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: marqueeScroll 15s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
